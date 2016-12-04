@@ -42,6 +42,20 @@ var config = {
                 test: /\.(css|scss)$/,
                 loader: 'style!css?modules',
                 include: /flexboxgrid/
+            }, {
+                test: /\.(woff|woff2)$/,
+                loader: 'url',
+                options: {
+                    name: 'fonts/[hash].[ext]',
+                    limit: 5000,
+                    mimetype: 'application/font-woff',
+                },
+            }, {
+                test: /\.(ttf|eot|svg)$/,
+                loader: 'file',
+                options: {
+                    name: 'fonts/[hash].[ext]',
+                },
             }
         ],
         noParse: [

@@ -128,6 +128,47 @@ class DropDown(_Controller):
         return [dict(label=l, value=v) for l, v in zip(labels, values)]
 
 
+class DatePicker(_Controller):
+    """Date Picker
+
+    Parameters
+    ----------
+    caption : str, optional
+        Heading text.
+
+    """
+    _TEMPLATE = 'bp_dates.jsx'
+    _COMPONENT = 'BPDatePicker'
+    _PACKAGE = ('@blueprintjs/core '
+                '@blueprintjs/datetime '
+                'react-addons-css-transition-group')
+    _TAG = ('<BPDatePicker '
+            'socket={{socket}} '
+            'uuid={{{uuid}}} '
+            '/>')
+
+    def __init__(self, caption=''):
+        super(DatePicker, self).__init__()
+
+        self._instantiate = self._TAG.format(
+            uuid="'{}'".format(self._uuid)
+        )
+        self.caption = caption
+
+    def on_change(self):
+        """Emits an event when the button is clicked.
+
+        | **Payload:** ``None``.
+
+        Returns
+        -------
+        str
+            Name of click event.
+
+        """
+        pass
+
+
 class Nouislider(_Controller):
     """Create a slider.
 

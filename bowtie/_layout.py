@@ -79,6 +79,7 @@ class Layout(object):
         'core-js',
         'css-loader',
         'extract-text-webpack-plugin',
+        'file-loader',
         'less-loader',
         'lodash.clonedeep',
         'msgpack-lite',
@@ -90,6 +91,7 @@ class Layout(object):
         'sass-loader',
         'socket.io-client',
         'style-loader',
+        'url-loader',
         'webpack@1.13.2'
     ]
 
