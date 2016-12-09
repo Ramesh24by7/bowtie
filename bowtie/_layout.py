@@ -79,7 +79,7 @@ class Layout(object):
         'classnames',
         'core-js',
         'css-loader',
-        'extract-text-webpack-plugin',
+        'extract-text-webpack-plugin@2.0.0-beta.4',
         'less',
         'less-loader',
         'lodash.clonedeep',
@@ -92,7 +92,7 @@ class Layout(object):
         'sass-loader',
         'socket.io-client',
         'style-loader',
-        'webpack@1.13.2'
+        'webpack@2.1.0-beta.27'
     ]
 
     def __init__(self, title='Bowtie App', description='Bowtie App\n---',
